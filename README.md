@@ -6,11 +6,21 @@ I built the catalogue website for my family's 22K gold wholesale business, and a
 
 Jewellery shops choose designs on WhatsApp. They need a clear picture, the weight, and one code to quote. Supplier photos arrive uneven: different lighting, tinted backgrounds, low resolution, weights printed on the image.
 
-| Before: the photo as received | After: what the pipeline produces |
-|---|---|
-| ![before and after](docs/img/before-after.jpg) | |
+Left is the image exactly as it arrived in the supplier's PDF, with the weight printed on it. Right is what the pipeline produces: enlarged, cut out onto clean white, the weight read off the label and stored as text, and the same margin on every piece so a grid of them looks like one collection.
 
-Left is the photo as first published, right is the processed result: upscaled, cut out onto clean white, with the same margin on every piece so a grid of them looks like one collection. Each design also gets a ready-to-forward share card:
+**Ring** (the original is a tiny piece in a wide photo, 1152 px across)
+
+![ring before and after](docs/img/before-after-ring.jpg)
+
+**Necklace** (on a display bust, against a patterned wall)
+
+![necklace before and after](docs/img/before-after-necklace.jpg)
+
+**Bangle** (tinted grey-blue background)
+
+![bangle before and after](docs/img/before-after-bangle.jpg)
+
+Each design also gets a ready-to-forward share card for WhatsApp:
 
 ![share card](docs/img/share-card.jpg)
 
