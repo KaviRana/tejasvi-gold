@@ -1,0 +1,50 @@
+[
+ {
+  "id": "TG-1001",
+  "category": "ladies-ring",
+  "weight_min_g": 2.28,
+  "weight_max_g": 2.28,
+  "status": "made-to-order",
+  "added": "2026-11-02"
+ },
+ {
+  "id": "TG-1002",
+  "category": "ladies-ring",
+  "weight_min_g": 4.75,
+  "weight_max_g": 4.75,
+  "status": "made-to-order",
+  "added": "2026-11-02"
+ },
+ {
+  "id": "TG-1008",
+  "category": "ladies-ring",
+  "weight_min_g": 3.04,
+  "weight_max_g": 3.04,
+  "status": "made-to-order",
+  "added": "2026-11-02"
+ },
+ {
+  "id": "TG-1023",
+  "category": "ladies-ring",
+  "weight_min_g": 3.26,
+  "weight_max_g": 3.26,
+  "status": "made-to-order",
+  "added": "2026-11-02"
+ },
+ {
+  "id": "TG-1046",
+  "category": "ladies-ring",
+  "weight_min_g": 2.35,
+  "weight_max_g": 2.35,
+  "status": "made-to-order",
+  "added": "2026-11-02"
+ },
+ {
+  "id": "TG-1055",
+  "category": "ladies-ring",
+  "weight_min_g": 3.08,
+  "weight_max_g": 3.08,
+  "status": "made-to-order",
+  "added": "2026-11-02"
+ }
+]

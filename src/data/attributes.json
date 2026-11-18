@@ -1,0 +1,8 @@
+{
+  "motif": ["Leaf", "Floral", "Wave", "Knot", "Twist", "Geometric", "Heart", "Plain"],
+  "finish": ["High polish", "Matte", "Polish and matte", "Textured"],
+  "work": ["Cast", "Filigree", "Cut work", "Beaded"],
+  "stones": ["None", "CZ", "Enamel"],
+  "occasion": ["Daily wear", "Engagement", "Wedding", "Festive"],
+  "weight_band": ["Under 3 g", "3–5 g", "Over 5 g"]
+}

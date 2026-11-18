@@ -1,0 +1,79 @@
+---
+import "../styles/global.css";
+import business from "../data/business.json";
+import { safeWa, CATALOGUE_MESSAGE, UPDATES_MESSAGE } from "../lib/whatsapp.js";
+import WaIcon from "../components/WaIcon.astro";
+import Wordmark from "../components/Wordmark.astro";
+const { title, description = "Hallmarked 22K gold rings, bangles and necklaces for jewellery shops. Code and weight on every design. Zaveri Bazaar, Mumbai.", waLink, tone = "light", floating = true, ogImage = "/og-home.jpg", ogType = "website", ogSize = [1200, 630], ogDescription = description } = Astro.props;
+// The WhatsApp link at top right: a piece page passes its own message, every other page asks for the catalogue.
+const updates = safeWa(business.whatsapp, UPDATES_MESSAGE);
+const wa = waLink ?? safeWa(business.whatsapp, CATALOGUE_MESSAGE);
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title ? `${title} | ${business.name}` : `${business.name} | 22K gold jewellery wholesale, Zaveri Bazaar`}</title>
+  <meta name="description" content={description} />
+  <meta name="theme-color" content={tone === "dark" ? "#463c26" : "#fbfaf8"} />
+  <!-- Saved to the home screen, it opens full screen like an app, with no browser bars. -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Tejasvi Gold" />
+  <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  <!-- The picture and text WhatsApp, Instagram and Google show when a link is pasted. -->
+  <meta property="og:site_name" content={business.name} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={title ? `${title} | ${business.name}` : `${business.name} | 22K gold jewellery wholesale`} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+  <meta property="og:image:width" content={ogSize[0]} />
+  <meta property="og:image:height" content={ogSize[1]} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <slot name="head" />
+</head>
+<body class:list={[tone === "dark" && "home"]}>
+  <header class:list={["topline", tone]}>
+    <a class="brand" href="/" aria-label="Tejasvi Gold, home"><Wordmark height={46} /></a>
+  </header>
+  {wa && floating && <a class="wafloat" href={wa} target="_blank" rel="noopener" aria-label="Ask on WhatsApp"><WaIcon size={26} /></a>}
+  <main><slot /></main>
+  <footer class="foot">
+    <div class="wrap center">
+      <div class="mark">Tejasvi Gold</div>
+      <p>22K gold jewellery, wholesale to jewellery shops</p>
+      {updates && <a class="join" href={updates} target="_blank" rel="noopener">Get new designs on WhatsApp</a>}
+      <hr class="rule" />
+      <p class="small">{business.address}</p>
+      <p class="small">GSTIN {business.gstin}</p>
+    </div>
+  </footer>
+</body>
+</html>
+<style>
+  /* One quiet line, not a bar: name left, WhatsApp right. On the dark home screen it sits over the picture. */
+  .topline { display: flex; justify-content: space-between; align-items: center; height: 68px; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .topline.dark .brand { visibility: hidden; }
+  .topline.dark { position: absolute; top: env(safe-area-inset-top); left: 0; right: 0; z-index: 20; color: var(--ivory); }
+  /* The home page's edges (behind the phone's status bar and browser bars) take the painting's colour. */
+  :global(html:has(body.home)) { background: #463c26; }
+  .brand { display: block; color: inherit; }
+  /* WhatsApp stays in the bottom-left corner on every page. */
+  /* On the home and catalogue pages: the WhatsApp logo only, bottom left. Piece pages have their own button. */
+  .wafloat { position: fixed; left: 20px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 40; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--gold-deep); border: 1px solid rgba(160,124,58,.5); box-shadow: 0 6px 16px rgba(26,24,23,.16); transition: background-color .2s, color .2s; }
+  .wafloat:hover, .wafloat:focus-visible { background: var(--gold-deep); color: #fff; }
+  @media (max-width: 820px) { .topline { padding: 0 16px; height: 60px; } .wafloat { left: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); } }
+  .join { display: inline-block; margin-top: 18px; padding: 12px 22px; border: 1px solid rgba(251,250,248,.5); border-radius: 999px; color: var(--ivory); text-decoration: none; font-size: 17px; }
+  .join:hover, .join:focus-visible { background: var(--ivory); color: var(--kohl); }
+  .foot { background: var(--kohl); color: var(--ivory); padding: 64px 0 96px; }
+  .mark { font: 400 30px/1 var(--display); color: var(--ivory); margin-bottom: 8px; }
+  .foot p { opacity: .75; }
+  .foot .small { font-size: 14px; opacity: .6; }
+  .foot .rule { background: var(--gold-soft); }
+</style>

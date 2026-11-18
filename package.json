@@ -1,0 +1,27 @@
+{
+  "name": "tejasvi-gold-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/ensure-deps.mjs && node scripts/apply-tags.mjs",
+    "dev": "astro dev",
+    "prebuild": "node scripts/ensure-deps.mjs && node scripts/apply-tags.mjs",
+    "build": "astro build",
+    "postbuild": "node scripts/prune-dist.mjs",
+    "map": "node tools/make_map.mjs",
+    "preview": "astro preview",
+    "test": "node --test tests/*.test.js",
+    "tags": "node scripts/apply-tags.mjs"
+  },
+  "dependencies": {
+    "@fontsource/bodoni-moda": "5.3.0",
+    "@fontsource/jost": "5.3.0",
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.2",
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "topojson-simplify": "^3.0.3"
+  }
+}

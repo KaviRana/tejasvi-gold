@@ -1,0 +1,10 @@
+---
+import Base from "../../layouts/Base.astro";
+import Catalogue from "../../components/Catalogue.astro";
+import { loadPieces } from "../../lib/pieces.js";
+
+const { pieces, cats } = await loadPieces(Astro.site);
+---
+<Base title="Catalogue" description="Wholesale 22K gold designs with codes, weights and purity. Ask for today's price on WhatsApp.">
+  <Catalogue pieces={pieces} cats={cats} heading="h1" />
+</Base>

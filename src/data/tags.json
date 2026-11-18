@@ -1,0 +1,50 @@
+[
+ {
+  "id": "TG-1001",
+  "motif": "Leaf",
+  "finish": "Polish and matte",
+  "work": "Cut work",
+  "stones": "None",
+  "occasion": "Daily wear"
+ },
+ {
+  "id": "TG-1002",
+  "motif": "Geometric",
+  "finish": "High polish",
+  "work": "Cast",
+  "stones": "None",
+  "occasion": "Festive"
+ },
+ {
+  "id": "TG-1008",
+  "motif": "Wave",
+  "finish": "High polish",
+  "work": "Cast",
+  "stones": "None",
+  "occasion": "Daily wear"
+ },
+ {
+  "id": "TG-1023",
+  "motif": "Geometric",
+  "finish": "High polish",
+  "work": "Cast",
+  "stones": "None",
+  "occasion": "Daily wear"
+ },
+ {
+  "id": "TG-1046",
+  "motif": "Leaf",
+  "finish": "High polish",
+  "work": "Filigree",
+  "stones": "None",
+  "occasion": "Festive"
+ },
+ {
+  "id": "TG-1055",
+  "motif": "Leaf",
+  "finish": "Textured",
+  "work": "Cut work",
+  "stones": "None",
+  "occasion": "Daily wear"
+ }
+]

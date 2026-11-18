@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+.vercel/
+.DS_Store
+catalogue-sources/
+models/
+.venv/
+tools/overnight.log
+.pkg/
+__pycache__/
+*.pyc
+
+# everything generated or in progress lives in working/
+working/
+public/designs/og/

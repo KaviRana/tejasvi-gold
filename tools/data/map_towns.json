@@ -1,0 +1,26 @@
+[
+ {
+  "name": "Mumbai",
+  "lat": 19.076,
+  "lng": 72.878,
+  "cities": [
+   "Mumbai"
+  ]
+ },
+ {
+  "name": "Pune",
+  "lat": 18.52,
+  "lng": 73.856,
+  "cities": [
+   "Pune"
+  ]
+ },
+ {
+  "name": "Nashik",
+  "lat": 19.998,
+  "lng": 73.79,
+  "cities": [
+   "Nashik"
+  ]
+ }
+]

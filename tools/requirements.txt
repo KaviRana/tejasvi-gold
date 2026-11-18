@@ -1,0 +1,11 @@
+# Exact versions, so every run gives the same pictures.
+pillow==12.3.0
+numpy==2.5.3
+torch==2.7.1
+torchvision==0.22.1
+spandrel==0.4.2
+safetensors==0.8.0
+einops==0.8.2
+rembg==2.0.87
+onnxruntime==1.31.1
+reportlab==5.0.1

@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import CustomerMap from "../components/CustomerMap.astro";
+import Catalogue from "../components/Catalogue.astro";
+import { loadPieces } from "../lib/pieces.js";
+import hero from "../data/hero.json";
+
+const { pieces, cats } = await loadPieces(Astro.site);
+const featured = hero.pieces.map((h) => ({ h, p: pieces.find((x) => x.id === h.id) })).filter((o) => o.p).map(({ h, p }) => ({ id: p.id, name: p.name, band: h.band }));
+
+---
+<Base tone="dark">
+  <h1 class="sr-only">Tejasvi Gold, 22K gold jewellery wholesale</h1>
+  <Hero featured={featured} />
+  <CustomerMap />
+  <Catalogue pieces={pieces} cats={cats} />
+</Base>

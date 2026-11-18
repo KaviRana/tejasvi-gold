@@ -1,0 +1,11 @@
+[
+  { "id": "ladies-ring", "name": "Ladies rings", "one": "Ring", "single": "Ladies Ring", "noun": "ladies' ring", "order": 1 },
+  { "id": "gents-ring", "name": "Gents rings", "one": "Gents Ring", "single": "Gents Ring", "noun": "gents' ring", "order": 2 },
+  { "id": "engagement-set", "name": "Engagement sets", "one": "Engagement Set", "single": "Engagement Set", "noun": "engagement ring set", "order": 3 },
+  { "id": "mangalsutra", "name": "Mangalsutra", "one": "Mangalsutra", "single": "Mangalsutra", "noun": "mangalsutra", "order": 4 },
+  { "id": "earring", "name": "Earrings and tops", "one": "Earrings", "single": "Earrings", "noun": "pair of earrings", "order": 5 },
+  { "id": "necklace", "name": "Necklaces and haar", "one": "Necklace", "single": "Necklace", "noun": "necklace", "order": 6 },
+  { "id": "bracelet", "name": "Bracelets", "one": "Bracelet", "single": "Bracelet", "noun": "bracelet", "order": 7 },
+  { "id": "pendant", "name": "Pendants", "one": "Pendant", "single": "Pendant", "noun": "pendant", "order": 8 },
+  { "id": "bangle", "name": "Bangles", "one": "Bangle", "single": "Bangle", "noun": "bangle", "order": 9 }
+]

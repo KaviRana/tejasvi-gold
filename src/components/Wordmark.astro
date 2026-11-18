@@ -1,0 +1,8 @@
+---
+// "Tejasvi Gold" in Kavita's lettering (Higuen Elegant Serif), as vector shapes taken from her design,
+// so it needs no font file. Colour comes from currentColor.
+import glyphs from "./wordmark-glyphs.txt?raw";
+const { height = 44, label = "Tejasvi Gold" } = Astro.props;
+---
+<svg class="wordmark" viewBox="626 43 793 406" height={height} role="img" aria-label={label} fill="currentColor" set:html={glyphs} />
+<style>.wordmark { display: block; width: auto; }</style>
