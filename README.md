@@ -20,9 +20,11 @@ Left is the image exactly as it arrived in the supplier's PDF, with the weight p
 
 ![bangle before and after](docs/img/before-after-bangle.jpg)
 
-Each design also gets a ready-to-forward share card for WhatsApp:
+Each design also gets a ready-to-forward share card for WhatsApp: logo, code, weight, name and contact line.
 
-![share card](docs/img/share-card.jpg)
+| Necklace | Ring |
+|---|---|
+| ![necklace share card](docs/img/share-card-necklace.jpg) | ![ring share card](docs/img/share-card-ring.jpg) |
 
 ## How a shop orders
 
