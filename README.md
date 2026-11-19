@@ -30,14 +30,6 @@ Each design also gets a ready-to-forward share card for WhatsApp: logo, code, we
 
 Every design page has one button. It opens WhatsApp with the message already written, so the owner gets the design code and weight without asking:
 
-```
-Namaste,
-Mujhe ye design ke baare mein jaankari chahiye:
-Leaf Cut Work Ring – TG-1001 (2.28 g)
-https://<site>/design/TG-1001/
-
-Aaj ka bhav aur delivery bataiye.
-```
 
 The site itself is static (Astro on Vercel): no server, no database, so it loads fast on cheap phones.
 
@@ -53,13 +45,6 @@ The site itself is static (Astro on Vercel): no server, no database, so it loads
 | 6 | `share_cards.py` | Makes a square WhatsApp card per design |
 | 7 | `catalogue_pdf.py` | Builds a printable PDF catalogue of chosen designs |
 
-## Decisions I'd defend
-
-- **A wrong weight is worse than a missing one.** If OCR finds anything but exactly one plausible value, the design goes to a manual review sheet instead of being published.
-- **Design codes are permanent.** A code a shop has quoted must always mean the same piece.
-- **Same files in, same pictures out.** No random settings, and the model weights are checked against a SHA-256 hash before use.
-- **Model licences matter.** The pipeline uses an Apache-2.0 segmentation model because the business is commercial.
-- **Every step skips finished work**, so adding a new catalogue only processes its new photos.
 
 ## Run it
 
